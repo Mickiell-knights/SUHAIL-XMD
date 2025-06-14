@@ -1,5 +1,6 @@
-const bot = require(__dirname + '/lib/smd')
-const { VERSION } = require(__dirname + '/config')
+ const path = required('path');
+const bot = require(path.join(__dirname + '/lib/smd'));
+const { VERSION } = require(path.join(__dirname + '/config'));
 
 const start = async () => {
     Debug.info(`Suhail ${VERSION}`)
@@ -10,7 +11,7 @@ const start = async () => {
     await bot.connect()
   } catch (error) {
     Debug.error(error);
-    start();
+    start(); //retry on error 
   }
 }
 start();
