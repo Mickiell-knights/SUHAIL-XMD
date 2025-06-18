@@ -1,17 +1,26 @@
- const path = required('path');
-const bot = require(path.join(__dirname + '/lib/smd'));
-const { VERSION } = require(path.join(__dirname + '/config'));
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { initBot, DATABASE, connect, logger } from './lib/smd/index.js';
+import { VERSION } from './config.js';
+import Debug from 'debug';
+
+const __filename = fileURLToPath(import.meta.url);
+const _dirname = path.dirname(_filename);
+
+const debug = Debug('Suhail');
 
 const start = async () => {
-    Debug.info(`Suhail ${VERSION}`)
+  debug(`Suhail ${VERSION}`);
+
   try {
-    await bot.init()
-    bot.logger.info('⏳ Database syncing!')
-    await bot.DATABASE.sync()
-    await bot.connect()
+    await initBot();
+    logger.info('⏳ Database syncing!');
+    await DATABASE.sync();
+    await connect();
   } catch (error) {
-    Debug.error(error);
-    start(); //retry on error 
+    debug(error);
+    start(); // Retry on error
   }
-}
+};
+
 start();
