@@ -1,17 +1,17 @@
 export async function init() {
-  console.log("Bot initializing...");
+  console.log("✅ Bot initializing...");
 }
 
 export const DATABASE = {
-  sync: async () => console.log("Database synced.")
+  sync: async () => console.log("🗄️ Database synced successfully.")
 };
 
 export async function connect() {
-  console.log("Connected to WhatsApp.");
+  console.log("🤖 Connected to WhatsApp successfully.");
 }
 
 export const logger = {
-  info: console.log
+  info: (msg) => console.log("ℹ️ Log:", msg
 };
 
 export default {
