@@ -7,8 +7,8 @@ global.audio= "" ;
 global.video= "" ;
 global.port =process.env.PORT 
 global.appUrl=process.env.APP_URL || "https://github.com/Mickiell-knights/SUHAIL-XMD"     // put your deploy app/bot url here, for 24/7 for (render , koyeb, glitch)
-global.email ="saimsamsun789@gmail.com"
-global.location="Accra,Ghana."
+global.email =""
+global.location="yaounde-cameroon."
 
 
 global.mongodb= process.env.MONGODB_URI || "https://cloud.mongodb.com/v2#/org/68419a5ee67cd0179828853c/projects"
@@ -16,7 +16,7 @@ global.allowJids= process.env.ALLOW_JID || "null"
 global.blockJids= process.env.BLOCK_JID || "null"
 global.DATABASE_URL = process.env.DATABASE_URL || "https://cloud.mongodb.com/v2#/org/68419a5ee67cd0179828853c/projects"
 
-global.timezone= process.env.TZ || process.env.TIME_ZONE || "Accra/Ghana";
+global.timezone= process.env.TZ || process.env.TIME_ZONE || "western-africa";
 global.github=process.env.GITHUB|| "https://github.com/GlobalTechInfo/SUHAIL-XMD";
 global.gurl  =process.env.GURL  || "https://whatsapp.com/channel/0029VagJIAr3bbVBCpEkAM07";
 global.website=process.env.GURL || "https://whatsapp.com/channel/0029VagJIAr3bbVBCpEkAM07" ; 
@@ -76,7 +76,7 @@ module.exports = {
  
   author : process.env.PACK_AUTHER|| "MRWILL-available",
   packname: process.env.PACK_NAME || "MRWILL-available",
-  botname : process.env.BOT_NAME  || "Mickiell Knights",
+  botname : process.env.BOT_NAME  || "Mickiell-Knights",
   ownername:process.env.OWNER_NAME|| "knights",
 
 
