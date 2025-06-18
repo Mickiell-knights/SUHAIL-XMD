@@ -4,7 +4,7 @@
    "status" : "Under Developement!",
    "description": "Multi device whatsapp bot.",
    "main": "index.js",
-   "type": "commonjs",  
+   "type": "module",  
    "scripts": {
             "run": "pm2 start . --deep-monitoring --attach --name Suhail",
             "suhail": "pm2 start . --deep-monitoring --attach --name Suhail",
